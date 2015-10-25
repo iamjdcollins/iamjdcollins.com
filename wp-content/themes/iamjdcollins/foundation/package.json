@@ -1,0 +1,9 @@
+{
+  "name": "foundation",
+  "version": "0.0.0",
+  "description": "Foundation 5 project used for the iamjdcollins WordPress theme",
+  "author": "iamjdcollins",
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  }
+}
