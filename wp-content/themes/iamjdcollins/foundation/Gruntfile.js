@@ -3,6 +3,24 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          'bower_components/foundation/scss/normalize.css': 'bower_components/foundation/scss/normalize.scss'
+        }
+      },
+    },
+    cssmin: {
+      target: {
+        files: [{
+          src: ['bower_components/foundation/scss/normalize.css'],
+          dest: ['bower_components/foundation/scss/normalize.min.css'],
+        }]
+      }
+    },
     copy: {
       main: {
         files: [
@@ -18,10 +36,13 @@ module.exports = function(grunt) {
 
   });
 
-  // Load the plugin that profiles the "copy" task.
+  // Load the plugin that provides the "copy" task.
   grunt.loadNpmTasks('grunt-contrib-copy');
 
+  // Load the plugin that provides the "sass" task.
+  grunt.loadNpmTasks('grunt-contrib-sass');
+
   // Default task(s).
-  grunt.registerTask('default', ['copy']);
+  grunt.registerTask('default', ['sass','copy']);
 
 };
