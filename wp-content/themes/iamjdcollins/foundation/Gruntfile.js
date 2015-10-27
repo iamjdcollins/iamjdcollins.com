@@ -42,7 +42,6 @@ module.exports = function(grunt) {
         }]
       },
     },
-<<<<<<< HEAD
     uglify: {
       modernizr: {
         options: {
@@ -96,18 +95,6 @@ module.exports = function(grunt) {
         files: [
           // includes files within path
           {src: ['js/app.min.js'], dest: '../js/foundation.app.min.js'},
-=======
-    copy: {
-      main: {
-        files: [
-          // includes files within path
-          {src: 'bower_components/foundation/scss/normalize.min.css', dest: '../css/normalize.min.css'},
-          {src: ['stylesheets/app.min.css'], dest: '../css/foundation.min.css'}, 
-          {src: ['bower_components/modernizr/modernizr.js'], dest: '../js/modernizr.js'},
-          {src: ['bower_components/jquery/dist/jquery.min.js'], dest: '../js/jquery.min.js'},
-          {src: ['bower_components/foundation/foundation.min.js'], dest: '../js/foundation.min.js'},
-          {src: ['js/app.js'], dest: '../js/foundation.app.js'},
->>>>>>> 0beaf78e02275c0250ee6e49f2506f0fc0fbfdfe
         ],
       },
     },
