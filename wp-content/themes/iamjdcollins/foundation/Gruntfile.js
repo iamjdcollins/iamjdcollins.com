@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     sass: {
-      normalize: {
+      normalizescss: {
         options: {
           style: 'expanded'
         },
@@ -12,7 +12,7 @@ module.exports = function(grunt) {
           'bower_components/foundation/scss/normalize.css': 'bower_components/foundation/scss/normalize.scss'
         }
       },
-      app: {
+      appscss: {
         options: {
           style: 'expanded',
           compass: true,
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       },
     },
     cssmin: {
-      normalize: {
+      normalizecss: {
         files: [{
           expand: true,
           cwd: 'bower_components/foundation/scss',
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
           ext: '.min.css'
         }]
       },
-      app: {
+      appcss: {
         files: [{
           expand: true,
           cwd: 'stylesheets',
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
       },
     },
     uglify: {
-      modernizr: {
+      modernizrjs: {
         options: {
           mangle: false
         },
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
           'js/mondernizr.min.js': ['bower_components/modernizr/modernizr.js']
         }
       },
-      app: {
+      appjs: {
         options: {
           mangle: false
         },
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
           {src: 'bower_components/foundation/scss/normalize.min.css', dest: '../css/normalize.min.css'},
         ],
       },
-      foundationmincss: {
+      appmincss: {
         files: [
           // includes files within path
           {src: ['stylesheets/app.min.css'], dest: '../css/foundation.min.css'},
@@ -91,14 +91,39 @@ module.exports = function(grunt) {
           {src: ['bower_components/foundation/foundation.min.js'], dest: '../js/foundation.min.js'},
         ],
       },
-      foundationappminjs: {
+      appminjs: {
         files: [
           // includes files within path
           {src: ['js/app.min.js'], dest: '../js/foundation.app.min.js'},
         ],
       },
     },
-
+    watch: {
+      normalizescss: {
+        files: ['bower_components/foundation/scss/normalize.scss'],
+        tasks: ['sass:normalizescss','cssmin:normalizecss','copy:normalizemincss'],
+      },
+      appscss: {
+        files: ['scss/app.scss'],
+        tasks: ['sass:appscss','cssmin:appcss','copy:appmincss'],
+      },
+      mondernizrjs: {
+        files: ['bower_components/modernizr/modernizr.js'],
+        tasks: ['unglify:modernizrjs','copy:modernizrminjs'],
+      },
+      jqueryminjs: {
+        files: ['bower_components/jquery/dist/jquery.min.js'],
+        tasks: ['copy:jqueryminjs'],
+      },
+      jqueryminjs: {
+        files: ['bower_components/foundation/foundation.min.js'],
+        tasks: ['copy:foundationminjs'],
+      }, 
+      appjs: {
+        files: ['js/app.js'],
+        tasks: ['unglify:appjs','copy:appminjs'],
+      },
+    },
   });
 
   // Load the plugin that provides the "copy" task.
@@ -113,6 +138,9 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
+  // Load the plugin that provides the "watch" task.
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
   // Default task(s).
-  grunt.registerTask('default', ['sass:normalize','sass:app','cssmin:normalize','cssmin:app','uglify:modernizr','uglify:app','copy']);
+  grunt.registerTask('default', ['sass:normalizescss','sass:appscss','cssmin:normalizecss','cssmin:appcss','uglify:modernizrjs','uglify:appjs','copy']);
 };
