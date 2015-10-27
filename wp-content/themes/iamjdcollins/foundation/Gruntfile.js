@@ -110,15 +110,9 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "cssmin" task.
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-<<<<<<< HEAD
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task(s).
   grunt.registerTask('default', ['sass:normalize','sass:app','cssmin:normalize','cssmin:app','uglify:modernizr','uglify:app','copy']);
-=======
-  // Default task(s).
-  grunt.registerTask('default', ['sass:normalize','sass:app','cssmin:normalize','cssmin:app','copy']);
->>>>>>> 0beaf78e02275c0250ee6e49f2506f0fc0fbfdfe
-
 };
