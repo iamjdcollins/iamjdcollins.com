@@ -104,7 +104,7 @@ module.exports = function(grunt) {
         tasks: ['sass:normalizescss','cssmin:normalizecss','copy:normalizemincss'],
       },
       appscss: {
-        files: ['scss/app.scss'],
+        files: ['scss/*.scss','bower_components/foundation/scss/**/*.scss','!bower_components/foundation/scss/normalize.scss'],
         tasks: ['sass:appscss','cssmin:appcss','copy:appmincss'],
       },
       mondernizrjs: {
