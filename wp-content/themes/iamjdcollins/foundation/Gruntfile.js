@@ -88,7 +88,7 @@ module.exports = function(grunt) {
       foundationminjs: {
         files: [
           // includes files within path
-          {src: ['bower_components/foundation/foundation.min.js'], dest: '../js/foundation.min.js'},
+          {src: ['bower_components/foundation/js/foundation.min.js'], dest: '../js/foundation.min.js'},
         ],
       },
       appminjs: {
