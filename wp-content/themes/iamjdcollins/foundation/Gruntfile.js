@@ -116,7 +116,7 @@ module.exports = function(grunt) {
         tasks: ['copy:jqueryminjs'],
       },
       jqueryminjs: {
-        files: ['bower_components/foundation/foundation.min.js'],
+        files: ['bower_components/foundation/js/foundation.min.js'],
         tasks: ['copy:foundationminjs'],
       }, 
       appjs: {
