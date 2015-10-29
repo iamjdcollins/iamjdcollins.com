@@ -13,3 +13,12 @@
       <?php wp_head(); ?>
   </head>
   <body>
+    <div id="page-wrapper">
+      <header class="row">
+        <div class="large-3 columns">
+          <img id="logo" src="http://www.jordancollins.me/wp-content/themes/jordancollinswp/img/simplified-green.png">
+        <div>
+        <nav class="large=9">
+
+        </nav>
+      </header>
