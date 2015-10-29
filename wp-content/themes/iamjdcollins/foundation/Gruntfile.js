@@ -21,6 +21,15 @@ module.exports = function(grunt) {
           'sytlesheets/app.css': 'scss/app.scss'
         }
       },
+      stylesscss: {
+        options: {
+          style: 'expanded',
+          compass: true,
+        },
+        files: {
+          '../css/styles.css': '../scss/styles.scss'
+        }
+      },
     },
     cssmin: {
       normalizecss: {
@@ -38,6 +47,15 @@ module.exports = function(grunt) {
           cwd: 'stylesheets',
           src: ['*.css', '!*.min.css'],
           dest: 'stylesheets',
+          ext: '.min.css'
+        }]
+      },
+      stylescss: {
+        files: [{
+          expand: true,
+          cwd: '../scss',
+          src: ['styles.css'],
+          dest: '../css',
           ext: '.min.css'
         }]
       },
@@ -107,6 +125,10 @@ module.exports = function(grunt) {
         files: ['scss/*.scss','bower_components/foundation/scss/**/*.scss','!bower_components/foundation/scss/normalize.scss'],
         tasks: ['sass:appscss','cssmin:appcss','copy:appmincss'],
       },
+      appscss: {
+        files: ['../scss/styles.scss'],
+        tasks: ['sass:stylesscss','cssmin:stylescss'],
+      },
       mondernizrjs: {
         files: ['bower_components/modernizr/modernizr.js'],
         tasks: ['unglify:modernizrjs','copy:modernizrminjs'],
@@ -142,5 +164,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass:normalizescss','sass:appscss','cssmin:normalizecss','cssmin:appcss','uglify:modernizrjs','uglify:appjs','copy']);
+  grunt.registerTask('default', ['sass:normalizescss','sass:appscss','sass:stylesscss','cssmin:normalizecss','cssmin:appcss','cssmin:stylescss','uglify:modernizrjs','uglify:appjs','copy']);
 };

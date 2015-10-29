@@ -14,11 +14,17 @@
   </head>
   <body>
     <div id="page-wrapper">
-      <header class="row">
+      <header class="clearfix full">
         <div class="large-3 columns">
           <img id="logo" src="http://www.jordancollins.me/wp-content/themes/jordancollinswp/img/simplified-green.png">
         <div>
         <nav class="large=9">
+          <ul>
+            <li><a href="http://www.jordancollins.me/">home</a></li>
+            <li><a href="http://www.jordancollins.me/?page_id=6">blog</a></li>
+            <li><a href="http://www.jordancollins.me/?page_id=13">resume</a></li>
+            <li><a href="http://www.jordancollins.me/?page_id=13">resume</a></li>
+          </ul>
 
         </nav>
       </header>
