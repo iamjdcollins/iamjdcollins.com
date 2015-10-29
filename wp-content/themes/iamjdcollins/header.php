@@ -18,7 +18,7 @@
         <div class="small-12 medium-3 columns">
           <img id="logo" src="http://www.jordancollins.me/wp-content/themes/jordancollinswp/img/simplified-green.png">
         </div>
-        <nav class="medium-9 show-for-medium-up columns">
+        <nav id="main-nav" class="medium-9 show-for-medium-up columns">
           <ul>
             <li><a href="http://www.jordancollins.me/">home</a></li>
             <li><a href="http://www.jordancollins.me/?page_id=6">blog</a></li>
