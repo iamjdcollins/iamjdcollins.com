@@ -14,7 +14,7 @@
   </head>
   <body>
     <div id="page-wrapper">
-      <header class="clearfix full">
+      <header class="clearfix back-gray-dark">
         <div class="large-3 columns">
           <img id="logo" src="http://www.jordancollins.me/wp-content/themes/jordancollinswp/img/simplified-green.png">
         <div>
