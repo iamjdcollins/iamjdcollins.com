@@ -17,7 +17,7 @@
       <header class="clearfix back-gray-dark">
         <div class="large-3 columns">
           <img id="logo" src="http://www.jordancollins.me/wp-content/themes/jordancollinswp/img/simplified-green.png">
-        <div>
+        </div>
         <nav class="large=9">
           <ul>
             <li><a href="http://www.jordancollins.me/">home</a></li>
