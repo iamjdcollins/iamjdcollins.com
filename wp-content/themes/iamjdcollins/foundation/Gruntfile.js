@@ -100,6 +100,12 @@ module.exports = function(grunt) {
           {src: ['stylesheets/app.min.css'], dest: '../css/foundation.min.css'},
         ],
       },
+      appmincss: {
+        files: [
+          // includes files within path
+          {src: ['../fontastic/fonts/*'], dest: '../fonts'},
+        ],
+      },
       modernizrminjs: {
         files: [
           // includes files within path
