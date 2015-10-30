@@ -20,6 +20,8 @@ function iamjdcollins_main_menu() {
   register_nav_menu('main-menu',__( 'Main Menu' ));
 }
 
+add_theme_support( 'html5', array( 'search-form' ) );
+
 add_action( 'init', 'iamjdcollins_main_menu' );
 
 add_action( 'wp_enqueue_scripts', 'iamjdcollins_foundation5' );

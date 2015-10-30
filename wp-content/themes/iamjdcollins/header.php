@@ -29,3 +29,4 @@
 
         </nav>
       </header>
+      <?php get_search_form( $echo ); ?>
