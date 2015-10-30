@@ -59,6 +59,15 @@ module.exports = function(grunt) {
           ext: '.min.css'
         }]
       },
+      fontasticcss: {
+        files: [{
+          expand: true,
+          cwd: '../fontastic',
+          src: ['fontastic.css'],
+          dest: '../css',
+          ext: '.min.css'
+        }]
+      },
     },
     uglify: {
       modernizrjs: {
@@ -125,9 +134,13 @@ module.exports = function(grunt) {
         files: ['scss/*.scss','bower_components/foundation/scss/**/*.scss','!bower_components/foundation/scss/normalize.scss'],
         tasks: ['sass:appscss','cssmin:appcss','copy:appmincss'],
       },
-      appscss: {
+      stylesscss: {
         files: ['../scss/styles.scss'],
         tasks: ['sass:stylesscss','cssmin:stylescss'],
+      },
+      fontasticcss: {
+        files: ['../css/fontastic.css'],
+        tasks: ['cssmin:fontasticcss'],
       },
       mondernizrjs: {
         files: ['bower_components/modernizr/modernizr.js'],
@@ -164,5 +177,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass:normalizescss','sass:appscss','sass:stylesscss','cssmin:normalizecss','cssmin:appcss','cssmin:stylescss','uglify:modernizrjs','uglify:appjs','copy']);
+  grunt.registerTask('default', ['sass:normalizescss','sass:appscss','sass:stylesscss','cssmin:normalizecss','cssmin:appcss','cssmin:stylescss','cssmin:fontasticcss','uglify:modernizrjs','uglify:appjs','copy']);
 };
