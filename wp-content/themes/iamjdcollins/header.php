@@ -26,7 +26,7 @@
             <li><a href="http://www.jordancollins.me/?page_id=13">resume</a></li>
           </ul> -->
           <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+          <?php get_search_form( true ); ?>
 
         </nav>
       </header>
-      <?php get_search_form( true ); ?>
