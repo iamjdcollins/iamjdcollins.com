@@ -13,7 +13,7 @@ function iamjdcollins_foundation5() {
 }
 
 function iamjdcollins_fontastic(){
-  wp_enqueue_style('fontastic', get_template_directory_uri() . '/css/fontastic.min.css', array(), '0.0.1','all' )
+  wp_enqueue_style('fontastic', get_template_directory_uri() . '/css/fontastic.min.css', array(), '0.0.1','all');
 }
 
 function iamjdcollins_personalstyle() {
