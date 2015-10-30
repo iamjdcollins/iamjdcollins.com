@@ -20,7 +20,7 @@
         </div>
         <nav id="main-nav" class="medium-9 show-for-medium-up columns">
           <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-          <i class="iamjdcollinscom-search"></i>
+          <i class="iamjdcollins-search"></i>
           <?php get_search_form( true ); ?>
 
         </nav>
