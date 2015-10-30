@@ -12,6 +12,10 @@ function iamjdcollins_foundation5() {
   wp_enqueue_script( 'f5foundationminappjs', get_template_directory_uri() . '/js/foundation.app.min.js', array(), '5.5.3', true );
 }
 
+function iamjdcollins_fontastic(){
+  wp_enqueue_style('fontastic', get_template_directory_uri() . '/css/fontastic.min.css', array(), '0.0.1','all' )
+}
+
 function iamjdcollins_personalstyle() {
   wp_enqueue_style('personalstylesmincss', get_template_directory_uri() . '/css/styles.min.css', array(), '0.0.1','all');
 }
@@ -25,4 +29,5 @@ add_theme_support( 'html5', array( 'search-form' ) );
 add_action( 'init', 'iamjdcollins_main_menu' );
 
 add_action( 'wp_enqueue_scripts', 'iamjdcollins_foundation5' );
+add_action( 'wp_enqueue_scripts', 'iamjdcollins_fontastic' );
 add_action( 'wp_enqueue_scripts', 'iamjdcollins_personalstyle' );
