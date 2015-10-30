@@ -103,7 +103,7 @@ module.exports = function(grunt) {
       fontasticfonts: {
         files: [
           // includes files within path
-          {src: ['../fontastic/fonts/**/*'], dest: '../fonts/',flatten: false},
+          {src: ['../fontastic/fonts/*'], dest: '../fonts/',expand: true},
         ],
       },
       modernizrminjs: {
