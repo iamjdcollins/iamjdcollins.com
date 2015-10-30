@@ -19,12 +19,13 @@
           <img id="logo" src="http://www.jordancollins.me/wp-content/themes/jordancollinswp/img/simplified-green.png">
         </div>
         <nav id="main-nav" class="medium-9 show-for-medium-up columns">
-          <ul>
+          <!-- <ul>
             <li><a href="http://www.jordancollins.me/">home</a></li>
             <li><a href="http://www.jordancollins.me/?page_id=6">blog</a></li>
             <li><a href="http://www.jordancollins.me/?page_id=13">resume</a></li>
             <li><a href="http://www.jordancollins.me/?page_id=13">resume</a></li>
-          </ul>
+          </ul> -->
+          <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 
         </nav>
       </header>

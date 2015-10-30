@@ -16,5 +16,11 @@ function iamjdcollins_personalstyle() {
   wp_enqueue_style('personalstylesmincss', get_template_directory_uri() . '/css/styles.min.css', array(), '0.0.1','all');
 }
 
+function iamjdcollins_main_menu() {
+  register_nav_menu('main-menu',__( 'Main Menu' ));
+}
+
+add_action( 'init', 'iamjdcollins_main_menu' );
+
 add_action( 'wp_enqueue_scripts', 'iamjdcollins_foundation5' );
 add_action( 'wp_enqueue_scripts', 'iamjdcollins_personalstyle' );
