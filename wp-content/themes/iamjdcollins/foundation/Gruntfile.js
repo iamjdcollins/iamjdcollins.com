@@ -100,7 +100,7 @@ module.exports = function(grunt) {
           {src: ['stylesheets/app.min.css'], dest: '../css/foundation.min.css'},
         ],
       },
-      appmincss: {
+      fontasticfonts: {
         files: [
           // includes files within path
           {src: ['../fontastic/fonts/*'], dest: '../fonts'},
@@ -146,7 +146,7 @@ module.exports = function(grunt) {
       },
       fontasticcss: {
         files: ['../css/fontastic.css'],
-        tasks: ['cssmin:fontasticcss'],
+        tasks: ['cssmin:fontasticcss','fontasticfonts'],
       },
       mondernizrjs: {
         files: ['bower_components/modernizr/modernizr.js'],
