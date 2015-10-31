@@ -90,7 +90,7 @@
 #open-menu:target ~ .open-menu{
   display: none;
 }
-#open-search:target ~ .close-menu{
+#open-menu:target ~ .close-menu{
   display: block;
 }
 
