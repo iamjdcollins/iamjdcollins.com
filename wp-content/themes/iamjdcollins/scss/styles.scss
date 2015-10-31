@@ -51,6 +51,7 @@
   font-size: 1.25em;
 }
 .search-form{
+  display:none;
   position: absolute;
   right: 0;
   left: 0;
@@ -62,7 +63,7 @@
 .search-form .screen-reader-text{
   display: none;
 }
-.search-form.search-field{
+.search-form .search-field{
   float: left;
   width: 66.6666%;
   margin: 10% 0;
