@@ -1,17 +1,17 @@
 /* Wrapper Styles */
 .back-gray-dark{
-  background: #222;
+  background: #121313;
 }
 /* Element Styles */
 #top-header{
-  border-bottom: solid 10px #9fb03e;
+  border-top: solid 3px #3A9FAD;
 }
 .main-menu-mobile ul li a, .open-search .iamjdcollins-search, .open-menu .iamjdcollins-menu, #main-nav ul li a{
     color: #9fb03e;
 }
-.main-menu-mobile ul li a:hover, #main-nav .iamjdcollins-search:hover, #main-nav ul li a:hover, .close-search .iamjdcollins-close, .close-menu .iamjdcollins-close{
-    background: #9fb03e;
-    color: #222;
+.main-menu-mobile ul li a:hover, #main-nav .iamjdcollins-menu:hover,#main-nav .iamjdcollins-search:hover, #main-nav ul li a:hover, .close-search .iamjdcollins-close, .close-menu .iamjdcollins-close{
+    background: #3A9FAD;
+    color: #121313;
 }
 
 /* Element Size and Positions */
@@ -37,7 +37,7 @@
   margin-right: .9375rem;
   position: absolute;
   top: 87px;
-  background: #222;
+  background: #121313;
   left: 0;
   right: 0;
 }
@@ -75,7 +75,7 @@
   margin: 0 .9375rem;
   top: 87px;
   padding: 0px 10px;
-  background: #222;
+  background: #121313;
 }
 .search-form .screen-reader-text{
   display: none;
@@ -88,11 +88,17 @@
 .search-form .search-submit{
   float: left;
   height: 2.3125rem;
-  margin: 10px 1px;
-  border: 0;
   width: 33%;
-  background: #9fb03e;
+  background: #121313 none repeat scroll 0% 0%;
+  color: #9FB03E;
+  border: 2px solid #9FB03E;
+  margin: 5px 1px;
 }
+.search-form .search-submit:hover{
+  color: #3A9FAD;
+  border: 2px solid #3A9FAD;
+}
+
 
 /* Targets */
 
@@ -125,7 +131,7 @@
       top: 87px;
       width: 300px;
       padding: 0px 10px;
-      background: #222;
+      background: #121313;
   }
   /* Targets */
 
