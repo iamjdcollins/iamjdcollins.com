@@ -83,19 +83,19 @@
 #open-search:target ~ .search-form{
   display: block;
 }
-#open-search:target ~ .open-search{
+#open-search:target ~ #top-header #main-nav .open-search{
   display: none;
 }
-#open-search:target ~ .close-search{
+#open-search:target ~ #top-header #main-nav .close-search{
   display: block;
 }
-#open-menu:target ~ .search-form{
+#open-menu:target ~ #top-header #main-nav .search-form{
   display: block;
 }
-#open-menu:target ~ .open-menu{
+#open-menu:target ~ #top-header #main-nav .open-menu{
   display: none !important;
 }
-#open-menu:target ~ .close-menu{
+#open-menu:target ~ #top-header #main-nav .close-menu{
   display: block;
 }
 
