@@ -5,6 +5,7 @@
 /* Element Styles */
 #top-header{
   border-top: solid 3px #9FB03E;
+  opacity: .85;
 }
 .main-menu-mobile ul li a, .open-search .iamjdcollins-search, .open-menu .iamjdcollins-menu, #main-nav ul li a{
     color: #9fb03e;
@@ -101,7 +102,7 @@
   color: #F52226;
   border: 2px solid #F52226;
 }
-#page_image {
+#intro {
   height: 100%;
   width: 100%;
   background: transparent url("http://365psd.com/images/previews/d29/shards-geometric-pattern-image-2036shards_pattern.jpg") no-repeat scroll 0% 0% / cover;
