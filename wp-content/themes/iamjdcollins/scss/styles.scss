@@ -29,7 +29,7 @@
   font-size: 1.25em;
 }
 .close-search, .close-menu{
-  display: none;
+  display: none !important;
 }
 .main-menu-mobile{
   display: none;
@@ -95,7 +95,7 @@
   display: none !important;
 }
 #open-menu:target ~ #top-header #main-nav .close-menu{
-  display: block;
+  display: block !important;
 }
 
 // Medium screens
