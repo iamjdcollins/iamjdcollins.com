@@ -1,5 +1,6 @@
 <?php
 /*Used to declare the doctype and head tags that appear on all pages*/
+$the_query = new WP_Query( $args );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
