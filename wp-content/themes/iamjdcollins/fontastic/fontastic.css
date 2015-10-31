@@ -38,9 +38,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.iamjdcollins-search:before {
-  content: "\e000";
-}
 .iamjdcollins-menu:before {
   content: "\e001";
 }
@@ -67,4 +64,10 @@
 }
 .iamjdcollins-github:before {
   content: "\e009";
+}
+.iamjdcollins-search:before {
+  content: "\e000";
+}
+.iamjdcollins-close:before {
+  content: "\e00a";
 }

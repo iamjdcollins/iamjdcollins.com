@@ -19,7 +19,8 @@
           <img id="logo" src="http://www.jordancollins.me/wp-content/themes/jordancollinswp/img/simplified-green.png">
         </div>
         <nav id="main-nav" class="small-8 medium-10 columns">
-          <i class="iamjdcollins-search"></i>
+          <div id="open-search"></div>
+          <a href="#open-search"><i class="iamjdcollins-search"></i></a>
           <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'show-for-medium-up' ) ); ?>
           <?php get_search_form( true ); ?>
 
