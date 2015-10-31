@@ -89,7 +89,7 @@
 #open-search:target ~ #top-header #main-nav .close-search{
   display: block;
 }
-#open-menu:target ~ #top-header #main-nav .search-form{
+#open-menu:target ~ .search-form{
   display: block;
 }
 #open-menu:target ~ #top-header #main-nav .open-menu{
@@ -101,7 +101,36 @@
 
 // Medium screens
 @media only screen and (min-width: 40.063em) { /* min-width 641px, medium screens */
-    
+  .search-form {
+      position: absolute;
+      right: .9375rem;
+      left: unset;
+      margin: auto;
+      top: 87px;
+      width: 300px;
+      padding: 10px;
+      background: #222;
+  }
+  /* Targets */
+
+  #open-search:target ~ #top-header #main-nav .search-form{
+    display: block;
+  }
+  #open-search:target ~ #top-header #main-nav .open-search{
+    display: none;
+  }
+  #open-search:target ~ #top-header #main-nav .close-search{
+    display: block;
+  }
+  #open-menu:target ~ #top-header #main-nav .search-form{
+    display: block;
+  }
+  #open-menu:target ~ #top-header #main-nav .open-menu{
+    display: none !important;
+  }
+  #open-menu:target ~ #top-header #main-nav .close-menu{
+    display: block;
+  }
 }
 
 // Large screens
