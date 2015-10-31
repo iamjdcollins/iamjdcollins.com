@@ -46,4 +46,26 @@
 }
 .search-form{
   display:none;
+  position: absolute;
+  right: 0px;
+  top: 87px;
+  width: 300px;
+  padding: 10px;
+  background: #222;
+}
+.screen-reader-text{
+  display: none;
+}
+.search-field{
+  float: left;
+  width: 200px;
+  margin: 10px 0;
+}
+.search-submit{
+  float: left;
+  height: 2.3125rem;
+  margin: 10px 1px;
+  border: 0;
+  width: 78px;
+  background: #9fb03e;
 }

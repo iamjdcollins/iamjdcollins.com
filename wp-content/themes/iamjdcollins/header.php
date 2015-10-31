@@ -15,12 +15,12 @@
   <body>
     <div id="page-wrapper">
       <header id="top-header" class="clearfix back-gray-dark">
-        <div class="small-12 medium-3 columns">
+        <div class="small-4 medium-2 columns">
           <img id="logo" src="http://www.jordancollins.me/wp-content/themes/jordancollinswp/img/simplified-green.png">
         </div>
-        <nav id="main-nav" class="medium-9 show-for-medium-up columns">
+        <nav id="main-nav" class="small-8 medium-10 columns">
           <i class="iamjdcollins-search"></i>
-          <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+          <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'show-for-medium-up' ) ); ?>
           <?php get_search_form( true ); ?>
 
         </nav>
