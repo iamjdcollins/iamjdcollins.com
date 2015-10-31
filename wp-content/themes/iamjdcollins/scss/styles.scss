@@ -51,13 +51,11 @@
   font-size: 1.25em;
 }
 .search-form{
-  display: none;
   position: absolute;
   right: 0;
   left: 0;
-  margin: auto;
+  margin: 0 .9375rem;
   top: 87px;
-  width: 300px;
   padding: 10px;
   background: #222;
 }
@@ -66,15 +64,15 @@
 }
 .search-form.search-field{
   float: left;
-  width: 200px;
-  margin: 10px 0;
+  width: 66.6666%;
+  margin: 10% 0;
 }
 .search-form .search-submit{
   float: left;
   height: 2.3125rem;
   margin: 10px 1px;
   border: 0;
-  width: 78px;
+  width: 33.3333%;
   background: #9fb03e;
 }
 
