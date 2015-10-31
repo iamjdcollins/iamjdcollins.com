@@ -20,7 +20,7 @@
   width: 45px;
   margin: 10px 0;
 }
-.open-search .iamjdcollins-search, .close-search .iamjdcollins-close, .open-menu .iamjdcollins-menu, .close-menu .iamjdcollins-menu{
+.open-search .iamjdcollins-search, .close-search .iamjdcollins-close, .open-menu .iamjdcollins-menu, .close-menu .iamjdcollins-close{
   float: right;
   display: block;
   line-height: 14px;
@@ -28,7 +28,7 @@
   vertical-align: bottom;
   font-size: 1.25em;
 }
-.close-search{
+.close-search, .close-menu{
   display: none;
 }
 #main-nav{
@@ -82,6 +82,15 @@
   display: none;
 }
 #open-search:target ~ .close-search{
+  display: block;
+}
+#open-menu:target ~ .search-form{
+  display: block;
+}
+#open-menu:target ~ .open-menu{
+  display: none;
+}
+#open-search:target ~ .close-menu{
   display: block;
 }
 
