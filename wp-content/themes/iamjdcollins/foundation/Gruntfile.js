@@ -146,7 +146,7 @@ module.exports = function(grunt) {
       },
       fontasticcss: {
         files: ['../css/fontastic.css'],
-        tasks: ['cssmin:fontasticcss','fontasticfonts'],
+        tasks: ['cssmin:fontasticcss','copy:fontasticfonts'],
       },
       mondernizrjs: {
         files: ['bower_components/modernizr/modernizr.js'],
