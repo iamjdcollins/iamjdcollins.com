@@ -5,7 +5,7 @@
     <!--<h2>Template: <?php get_template_directory_uri(); ?></h2>-->
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <section id="intro">
-      <pre><?php var_dump(the_post()); ?></pre>
+      <?php the_content(); ?>
     </section>
     <?php endwhile; else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
