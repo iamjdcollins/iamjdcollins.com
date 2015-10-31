@@ -98,7 +98,16 @@
   color: #F52226;
   border: 2px solid #F52226;
 }
-
+#page_image {
+  height: 100%;
+  width: 100%;
+  background: transparent url("http://365psd.com/images/previews/d29/shards-geometric-pattern-image-2036shards_pattern.jpg") no-repeat scroll 0% 0% / cover;
+  position: relative;
+  display: block;
+  top: -68px;
+  z-index: -10;
+  margin-bottom: -68px;
+}
 
 /* Targets */
 
