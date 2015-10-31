@@ -20,13 +20,16 @@
   width: 45px;
   margin: 10px 0;
 }
-#main-nav .iamjdcollins-search{
+.open-search .iamjdcollins-search, .close-search .iamjdcollins-close{
   float: right;
   display: block;
   line-height: 14px;
   padding: 22.5px 20px;
   vertical-align: bottom;
   font-size: 1.25em;
+}
+.close-search{
+  display: none;
 }
 #main-nav{
 }
@@ -68,4 +71,16 @@
   border: 0;
   width: 78px;
   background: #9fb03e;
+}
+
+/* Targets */
+
+#open-search:target ~ .search-form{
+  display: block;
+}
+#open-search:target ~ .open-search{
+  display: none;
+}
+#open-search:target ~ .close-search{
+  display: block;
 }
