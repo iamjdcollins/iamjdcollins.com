@@ -146,7 +146,9 @@
       background: #121313;
   }
   /* Targets */
-
+  #open-search:target ~ .search-form{
+    display: none;
+  }
   #open-search:target ~ #top-header #main-nav .search-form{
     display: block;
   }
