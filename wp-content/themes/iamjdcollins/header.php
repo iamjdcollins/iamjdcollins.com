@@ -14,7 +14,7 @@
   </head>
   <body>
     <div id="page-wrapper">
-      <?php wp_nav_menu( array( 'theme_location' => 'main-menu-mobile' ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'main-menu-mobile', 'menu_class' => 'show-for-small-only' ) ); ?>
       <?php get_search_form( true ); ?>
       <header id="top-header" class="clearfix back-gray-dark">
         <div class="small-4 medium-2 columns">
