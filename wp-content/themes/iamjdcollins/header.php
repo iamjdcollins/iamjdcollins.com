@@ -19,8 +19,8 @@
           <img id="logo" src="http://www.jordancollins.me/wp-content/themes/jordancollinswp/img/simplified-green.png">
         </div>
         <nav id="main-nav" class="medium-9 show-for-medium-up columns">
-          <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
           <i class="iamjdcollins-search"></i>
+          <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
           <?php get_search_form( true ); ?>
 
         </nav>
