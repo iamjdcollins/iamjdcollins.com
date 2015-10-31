@@ -2,11 +2,19 @@
 .back-gray-dark{
   background: #222;
 }
-
-/* Elements */
+/* Element Styles */
 #top-header{
   border-bottom: solid 10px #9fb03e;
 }
+#main-nav .iamjdcollins-search, #main-nav ul li a{
+    color: #9fb03e;
+}
+#main-nav .iamjdcollins-search:hover, #main-nav ul li a:hover{
+    background: #9fb03e;
+    color: #222;
+}
+
+/* Element Size and Positions */
 #logo{
   height: 45px;
   width: 45px;
@@ -17,7 +25,6 @@
   display: block;
   line-height: 14px;
   padding: 22.5px 20px;
-  color: #9fb03e;
   vertical-align: bottom;
   font-size: 1.25em;
 }
@@ -35,7 +42,6 @@
   float: left;
   line-height: 25px;
   padding: 20px 10px;
-  color: #9fb03e;
   font-size: 1.25em;
 }
 .search-form{
