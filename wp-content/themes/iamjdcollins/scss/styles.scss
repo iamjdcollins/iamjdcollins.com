@@ -83,10 +83,10 @@
   display: block;
 }
 #open-search:target ~ #top-header #main-nav .open-search{
-  display: none;
+  display: none !important;
 }
 #open-search:target ~ #top-header #main-nav .close-search{
-  display: block;
+  display: block !important;
 }
 #open-menu:target ~ .main-menu-mobile{
   display: block;
@@ -116,10 +116,10 @@
     display: block;
   }
   #open-search:target ~ #top-header #main-nav .open-search{
-    display: none;
+    display: none !important;
   }
   #open-search:target ~ #top-header #main-nav .close-search{
-    display: block;
+    display: block !important;
   }
   #open-menu:target ~ #top-header #main-nav .search-form{
     display: block;
@@ -128,7 +128,7 @@
     display: none !important;
   }
   #open-menu:target ~ #top-header #main-nav .close-menu{
-    display: block;
+    display: block !important;
   }
 }
 
