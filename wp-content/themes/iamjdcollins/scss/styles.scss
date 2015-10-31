@@ -138,15 +138,6 @@
   #open-search:target ~ #top-header #main-nav .close-search{
     display: block !important;
   }
-  #open-menu:target ~ #top-header #main-nav .search-form{
-    display: block;
-  }
-  #open-menu:target ~ #top-header #main-nav .open-menu{
-    display: none !important;
-  }
-  #open-menu:target ~ #top-header #main-nav .close-menu{
-    display: block !important;
-  }
 }
 
 // Large screens
