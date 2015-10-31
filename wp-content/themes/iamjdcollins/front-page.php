@@ -7,7 +7,11 @@
     <section id="intro" style="background: transparent url(<?php if(get_field('background_image')){ echo get_field('background_image');} ?>) no-repeat scroll 0px 0px / cover">
     </section>
     <main>
-      <?php the_content(); ?>
+      <div class="row page-body">
+        <div class="small-12 columns">
+          <?php the_content(); ?>
+        </div>
+      </div>
     </main>
     <?php endwhile; else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
