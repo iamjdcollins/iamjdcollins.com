@@ -6,10 +6,10 @@
 #top-header{
   border-bottom: solid 10px #9fb03e;
 }
-.open-search .iamjdcollins-search, .open-menu .iamjdcollins-menu, #main-nav ul li a{
+.main-menu-mobile ul li a, .open-search .iamjdcollins-search, .open-menu .iamjdcollins-menu, #main-nav ul li a{
     color: #9fb03e;
 }
-#main-nav .iamjdcollins-search:hover, #main-nav ul li a:hover, .close-search .iamjdcollins-close, .close-menu .iamjdcollins-close{
+.main-menu-mobile ul li a:hover, #main-nav .iamjdcollins-search:hover, #main-nav ul li a:hover, .close-search .iamjdcollins-close, .close-menu .iamjdcollins-close{
     background: #9fb03e;
     color: #222;
 }
