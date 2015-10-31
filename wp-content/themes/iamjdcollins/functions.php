@@ -24,9 +24,14 @@ function iamjdcollins_main_menu() {
   register_nav_menu('main-menu',__( 'Main Menu' ));
 }
 
+function iamjdcollins_main_menu_mobile() {
+  register_nav_menu('main-menu-mobile',__( 'Main Menu Mobile' ));
+}
+
 add_theme_support( 'html5', array( 'search-form' ) );
 
 add_action( 'init', 'iamjdcollins_main_menu' );
+add_action( 'init', 'iamjdcollins_main_menu_mobile' );
 
 add_action( 'wp_enqueue_scripts', 'iamjdcollins_foundation5' );
 add_action( 'wp_enqueue_scripts', 'iamjdcollins_fontastic' );
