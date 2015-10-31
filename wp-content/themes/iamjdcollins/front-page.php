@@ -6,7 +6,9 @@
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <section id="intro" style="background: transparent url(<?php if(get_field('background_image')){ echo get_field('background_image');} ?>) no-repeat scroll 0px 0px / cover">
     </section>
-    <?php the_content(); ?>
+    <main>
+      <?php the_content(); ?>
+    </main>
     <?php endwhile; else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
     <?php endif; ?>
