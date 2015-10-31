@@ -18,7 +18,7 @@ module.exports = function(grunt) {
           compass: true,
         },
         files: {
-          'sytlesheets/app.css': 'scss/app.scss'
+          'stylesheets/app.css': 'scss/app.scss'
         }
       },
       stylesscss: {

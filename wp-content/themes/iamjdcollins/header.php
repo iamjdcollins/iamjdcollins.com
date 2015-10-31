@@ -20,8 +20,11 @@
         </div>
         <nav id="main-nav" class="small-8 medium-10 columns">
           <div id="open-search"></div>
+          <div id="open-menu"></div>
           <a class="open-search" href="#open-search"><i class="iamjdcollins-search"></i></a>
           <a class="close-search" href="#"><i class="iamjdcollins-close"></i></a>
+          <a class="open-menu show-for-small-only" href="#open-menu"><i class="iamjdcollins-menu"></i></a>
+          <a class="close-menu" href="#"><i class="iamjdcollins-close"></i></a>
           <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'show-for-medium-up' ) ); ?>
           <?php get_search_form( true ); ?>
 

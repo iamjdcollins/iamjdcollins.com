@@ -6,10 +6,10 @@
 #top-header{
   border-bottom: solid 10px #9fb03e;
 }
-#main-nav .iamjdcollins-search, #main-nav ul li a{
+.open-search .iamjdcollins-search, .open-menu .iamjdcollins-menu, #main-nav ul li a{
     color: #9fb03e;
 }
-#main-nav .iamjdcollins-search:hover, #main-nav ul li a:hover, .close-search .iamjdcollins-close{
+#main-nav .iamjdcollins-search:hover, #main-nav ul li a:hover, .close-search .iamjdcollins-close, .close-menu .iamjdcollins-close{
     background: #9fb03e;
     color: #222;
 }
@@ -20,7 +20,7 @@
   width: 45px;
   margin: 10px 0;
 }
-.open-search .iamjdcollins-search, .close-search .iamjdcollins-close{
+.open-search .iamjdcollins-search, .close-search .iamjdcollins-close, .open-menu .iamjdcollins-menu, .close-menu .iamjdcollins-menu{
   float: right;
   display: block;
   line-height: 14px;
@@ -50,7 +50,7 @@
 .search-form{
   display:none;
   position: absolute;
-  right: 0px;
+  right: .9375rem;
   top: 87px;
   width: 300px;
   padding: 10px;
@@ -83,4 +83,24 @@
 }
 #open-search:target ~ .close-search{
   display: block;
+}
+
+// Medium screens
+@media only screen and (min-width: 40.063em) { /* min-width 641px, medium screens */
+    
+}
+
+// Large screens
+@media only screen and (min-width: 64.063em) { /* min-width 1025px, large screens */
+
+}
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) { /* min-width 1441px, xlarge screens */
+
+}
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) { 
+
 }
