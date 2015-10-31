@@ -3,9 +3,9 @@
 ?>
     <?php get_header(); ?>
     <!--<h2>Template: <?php get_template_directory_uri(); ?></h2>-->
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
     <section id="intro">
-      <pre><?php var_dump($the_query); ?></pre>
+      <pre><?php var_dump($the_query-the_post()); ?></pre>
     </section>
     <?php endwhile; else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
