@@ -33,6 +33,22 @@
 }
 .main-menu-mobile{
   display: none;
+  margin-left: .9375rem;
+  margin-right: .9375rem;
+  position: absolute;
+  top: 87px;
+  background: #222;
+  left: 0;
+  right: 0;
+}
+.main-menu-mobile ul {
+    margin: 0px;
+}
+.main-menu-mobile ul li {
+}
+.main-menu-mobile ul li a {
+    display: block;
+    padding: 10px .9375rem;
 }
 #main-nav{
 }
