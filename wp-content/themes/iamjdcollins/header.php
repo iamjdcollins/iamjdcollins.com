@@ -14,7 +14,7 @@
   </head>
   <body>
     <div id="page-wrapper">
-      <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'show-for-medium-up' ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'main-menu-mobile' ) ); ?>
       <?php get_search_form( true ); ?>
       <header id="top-header" class="clearfix back-gray-dark">
         <div class="small-4 medium-2 columns">
