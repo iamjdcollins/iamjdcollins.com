@@ -138,6 +138,9 @@
   #open-search:target ~ #top-header #main-nav .close-search{
     display: block !important;
   }
+  .close-menu{
+    display: none !important;
+  }
 }
 
 // Large screens
