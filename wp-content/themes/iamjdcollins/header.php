@@ -16,7 +16,7 @@
     <div id="page-wrapper">
       <div id="open-search"></div>
       <div id="open-menu"></div>
-      <?php wp_nav_menu( array( 'theme_location' => 'main-menu-mobile', 'menu_class' => 'show-for-small-only' ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'main-menu-mobile', 'menu_class' => array('show-for-small-only','main-menu-mobile') ) ); ?>
       <?php get_search_form( true ); ?>
       <header id="top-header" class="clearfix back-gray-dark">
         <div class="small-4 medium-2 columns">
