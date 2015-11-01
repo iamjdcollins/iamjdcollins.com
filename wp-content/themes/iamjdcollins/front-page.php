@@ -15,9 +15,9 @@
       <?php endif; ?>
     </section>
     <?php endif; ?>
-    <main>
+    <main class="main wrapper">
       <div class="row page-body">
-        <div class="small-12 columns">
+        <div class="small-12 large-8 columns">
           <?php the_content(); ?>
         </div>
       </div>

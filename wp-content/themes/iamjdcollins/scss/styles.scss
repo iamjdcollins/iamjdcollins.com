@@ -5,7 +5,6 @@
 /* Element Styles */
 #top-header{
   border-top: solid 3px #9FB03E;
-  opacity: .85;
 }
 .main-menu-mobile ul li a, .open-search .iamjdcollins-search, .open-menu .iamjdcollins-menu, #main-nav ul li a{
     color: #9fb03e;
@@ -119,14 +118,19 @@
 }
 #intro .row #intro-content {
   height: 100%;
-  background: rgba(18, 19, 19, 0.85) none repeat scroll 0% 0%;
+  background: rgba(18, 19, 19, 1) none repeat scroll 0% 0%;
   text-align: center;
   color: rgb(159, 176, 62);
 }
 #intro .row #intro-content p{
   font-size: 2.5em;
 }
-
+.wrapper{
+  padding 10px 0;
+}
+.main{
+  background: #f9f9f9;
+}
 /* Targets */
 
 #open-search:target ~ .search-form{
