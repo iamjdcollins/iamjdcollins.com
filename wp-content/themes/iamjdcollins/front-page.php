@@ -8,7 +8,7 @@
     <section id="intro" style="background: transparent url(<?php if(get_field('background_image')){ echo get_field('background_image');} ?>) no-repeat scroll 0px 0px / cover">
       <?php if ( get_field('intro_text') ): ?>
       <div class="row">
-        <div id="intro-content" class="small-12 columns">
+        <div id="intro-content" class="small-11 medium-8 large-5 small-centered columns">
           <p><?php echo get_field('intro_text'); ?></p>
         </div>
       </div>
