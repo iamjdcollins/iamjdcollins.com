@@ -7,7 +7,7 @@
     <?php if ( get_field('page_intro') == 'Yes' ): ?>
     <section id="intro" style="background: transparent url(<?php if(get_field('background_image')){ echo get_field('background_image');} ?>) no-repeat scroll 0px 0px / cover">
       <?php if ( get_field('into_text') ): ?>
-      <p><?php echo get_field('into_text'); ?></p>
+      <p><?php echo get_field('intro_text'); ?></p>
       <?php endif; ?>
     </section>
     <?php endif; ?>
