@@ -16,6 +16,10 @@ function iamjdcollins_fontastic(){
   wp_enqueue_style('fontastic', get_template_directory_uri() . '/css/fontastic.min.css', array(), '0.0.1','all');
 }
 
+function iamjdcollins_opensans(){
+  wp_enqueue_style('opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic', array(), '1.0.0','all');
+}
+
 function iamjdcollins_personalstyle() {
   wp_enqueue_style('personalstylesmincss', get_template_directory_uri() . '/css/styles.min.css', array(), '0.0.1','all');
 }
@@ -35,4 +39,5 @@ add_action( 'init', 'iamjdcollins_main_menu_mobile' );
 
 add_action( 'wp_enqueue_scripts', 'iamjdcollins_foundation5' );
 add_action( 'wp_enqueue_scripts', 'iamjdcollins_fontastic' );
+add_action( 'wp_enqueue_scripts', 'iamjdcollins_opensans' );
 add_action( 'wp_enqueue_scripts', 'iamjdcollins_personalstyle' );
