@@ -71,3 +71,6 @@
 .iamjdcollins-close:before {
   content: "\e00a";
 }
+.iamjdcollins-logo:before {
+  content: "\e00b";
+}

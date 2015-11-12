@@ -21,7 +21,7 @@ $the_query = new WP_Query( $args );
       <?php get_search_form( true ); ?>
       <header id="top-header" class="clearfix back-gray-dark">
         <div class="small-4 medium-2 columns">
-          <img id="logo" src="http://www.jordancollins.me/wp-content/themes/jordancollinswp/img/simplified-green.png">
+          <span id="logo" class="iamjdcollins-logo"></span>
         </div>
         <nav id="main-nav" class="small-8 medium-10 columns">
           <a class="open-search" href="#open-search"><i class="iamjdcollins-search"></i></a>

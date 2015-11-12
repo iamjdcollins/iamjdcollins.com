@@ -1,0 +1,203 @@
+/* Fonts */
+html, body{
+  font-family: 'open sans', sans-serif;
+}
+/* Wrapper Styles */
+.back-gray-dark{
+  background: #121313;
+}
+/* Element Styles */
+#top-header{
+  border-top: solid 3px #9FB03E;
+}
+.main-menu-mobile ul li a, .open-search .iamjdcollins-search, .open-menu .iamjdcollins-menu, #main-nav ul li a{
+    color: #9fb03e;
+}
+.main-menu-mobile ul li a:hover, #main-nav .iamjdcollins-menu:hover,#main-nav .iamjdcollins-search:hover, #main-nav ul li a:hover, .close-search .iamjdcollins-close, .close-menu .iamjdcollins-close{
+    background: #9FB03E;
+    color: #121313;
+}
+
+/* Element Size and Positions */
+#page-wrapper{
+  height: 100%;
+}
+#logo{
+  height: 45px;
+  width: 45px;
+  margin: 10px 0;
+}
+.open-search .iamjdcollins-search, .close-search .iamjdcollins-close, .open-menu .iamjdcollins-menu, .close-menu .iamjdcollins-close{
+  float: right;
+  display: block;
+  line-height: 14px;
+  padding: 22.5px 20px;
+  vertical-align: bottom;
+  font-size: 1.25em;
+}
+.close-search, .close-menu{
+  display: none !important;
+}
+.main-menu-mobile{
+  display: none;
+  margin-left: .9375rem;
+  margin-right: .9375rem;
+  position: absolute;
+  top: 87px;
+  background: #121313;
+  left: 0;
+  right: 0;
+}
+.main-menu-mobile ul {
+    margin: 0px;
+}
+.main-menu-mobile ul li {
+  list-style: none;
+}
+.main-menu-mobile ul li a {
+    display: block;
+    padding: 10px .9375rem;
+}
+#main-nav{
+}
+#main-nav ul{
+  float: right;
+  margin: 0px;
+}
+#main-nav ul li{
+  display: inline;
+}
+#main-nav ul li a{
+  display: block;
+  float: left;
+  line-height: 25px;
+  padding: 20px 10px;
+  font-size: 1.25em;
+}
+.search-form{
+  display:none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 .9375rem;
+  top: 87px;
+  padding: 0px 10px;
+  background: #121313;
+}
+.search-form .screen-reader-text{
+  display: none;
+}
+.search-form .search-field{
+  float: left;
+  width: 66%;
+  margin: 10px 0;
+}
+.search-form .search-submit{
+  float: left;
+  height: 2.3125rem;
+  width: 33%;
+  background: #121313 none repeat scroll 0% 0%;
+  color: #9FB03E;
+  border: 2px solid #9FB03E;
+  margin: 10px 1px;
+}
+.search-form .search-submit:hover{
+  color: #F52226;
+  border: 2px solid #F52226;
+}
+#intro {
+  height: 100%;
+  width: 100%;
+  max-height: 700px;
+  background: transparent url("http://365psd.com/images/previews/d29/shards-geometric-pattern-image-2036shards_pattern.jpg") no-repeat scroll 0% 0% / cover;
+  position: relative;
+  display: block;
+  top: -68px;
+  z-index: -10;
+  margin-bottom: -68px;
+}
+#intro .row {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#intro .row #intro-content {
+  height: 100%;
+  background: rgba(18, 19, 19, 1) none repeat scroll 0% 0%;
+  text-align: center;
+  color: rgb(159, 176, 62);
+}
+#intro .row #intro-content span{
+  font-size: 2.5em;
+}
+.wrapper{
+  padding: 10px 0;
+}
+.main{
+  background: #f9f9f9;
+}
+/* Targets */
+
+#open-search:target ~ .search-form{
+  display: block;
+}
+#open-search:target ~ #top-header #main-nav .open-search{
+  display: none !important;
+}
+#open-search:target ~ #top-header #main-nav .close-search{
+  display: block !important;
+}
+#open-menu:target ~ .main-menu-mobile{
+  display: block;
+}
+#open-menu:target ~ #top-header #main-nav .open-menu{
+  display: none !important;
+}
+#open-menu:target ~ #top-header #main-nav .close-menu{
+  display: block !important;
+}
+
+// Medium screens
+@media only screen and (min-width: 40.063em) { /* min-width 641px, medium screens */
+  .search-form {
+      position: absolute;
+      right: .9375rem;
+      left: auto;
+      margin: auto;
+      top: 87px;
+      width: 300px;
+      padding: 0px 10px;
+      background: #121313;
+  }
+  /* Targets */
+  #open-search:target ~ .search-form{
+    display: none;
+  }
+  #open-search:target ~ #top-header #main-nav .search-form{
+    display: block;
+  }
+  #open-search:target ~ #top-header #main-nav .open-search{
+    display: none !important;
+  }
+  #open-search:target ~ #top-header #main-nav .close-search{
+    display: block !important;
+  }
+  #open-menu:target~#top-header #main-nav .close-menu{
+    display: none !important;
+  }
+}
+
+// Large screens
+@media only screen and (min-width: 64.063em) { /* min-width 1025px, large screens */
+
+}
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) { /* min-width 1441px, xlarge screens */
+
+}
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) { 
+
+}
