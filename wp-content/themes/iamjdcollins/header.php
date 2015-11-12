@@ -19,7 +19,7 @@ $the_query = new WP_Query( $args );
       <div id="open-menu"></div>
       <?php wp_nav_menu( array( 'theme_location' => 'main-menu-mobile', 'menu_class' => 'show-for-small-only', 'container_class' => 'main-menu-mobile' ) ); ?>
       <?php get_search_form( true ); ?>
-      <header id="top-header" class="clearfix back-gray-dark">
+      <header id="top-header" class="clearfix back-white">
         <div class="small-4 medium-2 columns">
           <i id="logo" class="iamjdcollins-logo"></i>
         </div>

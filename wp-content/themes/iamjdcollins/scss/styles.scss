@@ -6,15 +6,18 @@ html, body{
 .back-gray-dark{
   background: #121313;
 }
+.back-white{
+  background: #f9f9f9;
+}
 /* Element Styles */
 #top-header{
-  border-top: solid 3px #9FB03E;
+  border-top: solid 3px #3c948b;
 }
 .main-menu-mobile ul li a, .open-search .iamjdcollins-search, .open-menu .iamjdcollins-menu, #main-nav ul li a{
-    color: #9fb03e;
+    color: #3c948b;
 }
 .main-menu-mobile ul li a:hover, #main-nav .iamjdcollins-menu:hover,#main-nav .iamjdcollins-search:hover, #main-nav ul li a:hover, .close-search .iamjdcollins-close, .close-menu .iamjdcollins-close{
-    background: #9FB03E;
+    background: #3c948b;
     color: #121313;
 }
 
@@ -23,9 +26,11 @@ html, body{
   height: 100%;
 }
 #logo{
-  height: 45px;
-  width: 45px;
+  font-size: 45px;
+  line-height: 25px;
   margin: 10px 0;
+  display: block;
+  color: #3c948b;
 }
 .open-search .iamjdcollins-search, .close-search .iamjdcollins-close, .open-menu .iamjdcollins-menu, .close-menu .iamjdcollins-close{
   float: right;
@@ -97,8 +102,8 @@ html, body{
   height: 2.3125rem;
   width: 33%;
   background: #121313 none repeat scroll 0% 0%;
-  color: #9FB03E;
-  border: 2px solid #9FB03E;
+  color: #3c948b;
+  border: 2px solid #3c948b;
   margin: 10px 1px;
 }
 .search-form .search-submit:hover{
