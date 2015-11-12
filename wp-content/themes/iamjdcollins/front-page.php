@@ -9,7 +9,7 @@
       <?php if ( get_field('intro_text') ): ?>
       <div class="row">
         <div id="intro-content" class="small-11 medium-8 large-5 small-centered columns">
-          <p><?php echo get_field('intro_text'); ?></p>
+          <span><?php echo get_field('intro_text'); ?></span>
         </div>
       </div>
       <?php endif; ?>
