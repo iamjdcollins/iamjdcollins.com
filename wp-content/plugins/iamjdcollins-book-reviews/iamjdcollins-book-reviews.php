@@ -72,7 +72,7 @@ function iamjdcollins_book_review_author_metabox() {
 
 function iamjdcollins_book_review_save_author_metabox($post_id) {
 	$value = $_POST['book_review_author'];
-	update_post_meta($post_id, 'book_review_author', $value );
+	update_post_meta($post_id, 'book_author', $value );
 }
 
 add_action( 'init', 'iamjdcollins_book_reviews_init' );
