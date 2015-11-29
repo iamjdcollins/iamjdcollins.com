@@ -68,3 +68,4 @@ function iamjdcollins_book_review_author_metabox() {
 }
 
 add_action( 'init', 'iamjdcollins_book_reviews_init' );
+add_action( 'add_meta_boxes', 'iamjdcollins_book_review_add_author_box' );
