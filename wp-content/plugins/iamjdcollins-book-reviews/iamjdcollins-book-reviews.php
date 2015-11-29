@@ -10,7 +10,6 @@ License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: iamjdcollins-book-reviews
 */
-defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 function iamjdcollins_book_reviews_init() {
 	$labels = array(
