@@ -11,3 +11,42 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: iamjdcollins-book-reviews
 */
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
+function iamjdcollins_book_reviews_init() {
+	$labels = array(
+		'name'               => __( 'Book Reviews' ),
+		'singular_name'      => __( 'Book Review' ),
+		'menu_name'          => __( 'Book Reviews' ),
+		'name_admin_bar'     => __( 'Book Review' ),
+		'add_new'            => __( 'Add New' ),
+		'add_new_item'       => __( 'Add New Book Review' ),
+		'new_item'           => __( 'New Book Review' ),
+		'edit_item'          => __( 'Edit Book Review' ),
+		'view_item'          => __( 'View Book Review' ),
+		'all_items'          => __( 'All Book Reviews' ),
+		'search_items'       => __( 'Search Book Reviews' ),
+		'parent_item_colon'  => __( 'Parent Book Reviews:' ),
+		'not_found'          => __( 'No book reviews found.' ),
+		'not_found_in_trash' => __( 'No book reviews found in Trash.' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+        'description'        => __( 'Keeping track of the books I am reading and the reviews of read books.', 'your-plugin-textdomain' ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'book-review' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+	);
+
+	register_post_type( 'iamjdcollins-book-reviews', $args );
+}
+
+add_action( 'init', 'iamjdcollins_book_reviews_init' );
