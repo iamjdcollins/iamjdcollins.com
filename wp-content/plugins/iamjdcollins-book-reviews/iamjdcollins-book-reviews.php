@@ -46,7 +46,7 @@ function iamjdcollins_book_reviews_init() {
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
 	);
 
-	register_post_type( 'iamjdcollins-book-reviews', $args );
+	register_post_type( 'book-reviews', $args );
 }
 
 add_action( 'init', 'iamjdcollins_book_reviews_init' );
