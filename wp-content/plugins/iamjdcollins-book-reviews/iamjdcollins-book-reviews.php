@@ -65,7 +65,7 @@ function iamjdcollins_book_review_author_metabox() {
 
 	echo '<input class="book-author" type="text" name="book_author" value="' . get_post_meta( $post->ID, 'book_review_author', true ) . '" />';
 
-	update_post_meta($post->ID, $meta_key, $value );
+	update_post_meta($post->ID, 'book_review_author', 'Jd Collins2' );
 
 }
 
