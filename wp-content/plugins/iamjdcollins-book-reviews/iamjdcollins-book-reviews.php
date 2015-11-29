@@ -42,7 +42,7 @@ function iamjdcollins_book_reviews_init() {
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
-		'menu_position'      => null,
+		'menu_position'      => 25,
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
 	);
 
