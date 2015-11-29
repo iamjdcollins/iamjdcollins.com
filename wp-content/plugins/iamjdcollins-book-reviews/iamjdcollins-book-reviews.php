@@ -30,8 +30,9 @@ function iamjdcollins_book_reviews_init() {
 	);
 
 	$args = array(
+		'label'	             => __( 'Book Reviews' ),
 		'labels'             => $labels,
-        'description'        => __( 'Keeping track of the books I am reading and the reviews of read books.', 'your-plugin-textdomain' ),
+        'description'        => __( 'Keeping track of the books I am reading and the reviews of read books.' ),
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
