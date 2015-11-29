@@ -14,7 +14,7 @@ Text Domain: iamjdcollins-book-reviews
 function iamjdcollins_book_reviews_init() {
 	$labels = array(
 		'name'               => __( 'Book Reviews' ),
-		'singular_name'      => __( 'Book Review' ),
+		'singular_name'      => __( 'Book Review' )
 		// 'menu_name'          => __( 'Book Reviews' ),
 		// 'name_admin_bar'     => __( 'Book Review' ),
 		// 'add_new'            => __( 'Add New' ),
@@ -33,17 +33,17 @@ function iamjdcollins_book_reviews_init() {
 		'label'	             => __( 'Book Reviews' ),
 		'labels'             => $labels,
   //       'description'        => __( 'Keeping track of the books I am reading and the reviews of read books.' ),
-		// 'public'             => true,
+		'public'             => true,
 		// 'publicly_queryable' => true,
 		// 'show_ui'            => true,
 		// 'show_in_menu'       => true,
 		// 'query_var'          => true,
 		// 'rewrite'            => array( 'slug' => 'book-review' ),
 		// 'capability_type'    => 'post',
-		// 'has_archive'        => true,
-		// 'hierarchical'       => false,
-		// 'menu_position'      => 25,
-		// 'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 25,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
 	);
 
 	register_post_type( 'iamjdcollins-book-reviews', $args );
