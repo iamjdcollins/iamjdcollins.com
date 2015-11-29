@@ -56,18 +56,24 @@ function iamjdcollins_book_reviews_rewrite_rules() {
 	flush_rewrite_rules( false );
 }
 
-function iamjdcollins_book_review_add_author_box() {
+function iamjdcollins_book_review_add_author_metabox() {
 	add_meta_box( 'book_review_author', 'Book Author', 'iamjdcollins_book_review_author_metabox', 'book-reviews', 'normal', 'default' );
 }
 
 function iamjdcollins_book_review_author_metabox() {
 	global $post;
 
+	wp_nonce_field( 'iamjdcollins_book_review_save_author_metabox', 'book_review_nonce' );
 	echo '<input class="book-author" type="text" name="book_author" value="' . get_post_meta( $post->ID, 'book_review_author', true ) . '" />';
 
-	update_post_meta($post->ID, 'book_review_author', $value );
+	
 
 }
 
+function iamjdcollins_book_review_save_author_metabox($post_id) {
+	$value = $_POST['book_review_author'];
+	update_post_meta($post_id, 'book_review_author', $value );
+}
+
 add_action( 'init', 'iamjdcollins_book_reviews_init' );
-add_action( 'add_meta_boxes', 'iamjdcollins_book_review_add_author_box' );
+add_action( 'add_meta_boxes', 'iamjdcollins_book_review_add_author_metabox' );
