@@ -11,6 +11,8 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: iamjdcollins-book-reviews
 */
 
+register_activation_hook(__FILE__, 'iamjdcollins_book_reviews_rewrite_rules')
+
 function iamjdcollins_book_reviews_init() {
 	$labels = array(
 		'name'               => __( 'Book Reviews' ),
@@ -43,10 +45,15 @@ function iamjdcollins_book_reviews_init() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => 25,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+		'supports'           => array( 'title' )
 	);
 
 	register_post_type( 'book-reviews', $args );
+}
+
+function iamjdcollins_book_reviews_rewrite_rules() {
+	iamjdcollins_book_reviews_init();
+	flush_rewrite_rules( false );
 }
 
 add_action( 'init', 'iamjdcollins_book_reviews_init' );
