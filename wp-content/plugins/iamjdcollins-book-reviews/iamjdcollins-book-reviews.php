@@ -56,4 +56,15 @@ function iamjdcollins_book_reviews_rewrite_rules() {
 	flush_rewrite_rules( false );
 }
 
+function iamjdcollins_book_review_add_author_box() {
+	add_meta_box( 'book_review_author', 'Book Author', 'iamjdcollins_book_review_author_metabox', 'book-reviews', 'normal', 'default' );
+}
+
+function iamjdcollins_book_review_author_metabox() {
+	global $post;
+
+	echo '<input class="book-author" type="text" name="book_author" value="' . get_post_meta( $post-ID, 'book_review_author', true ) . '"';
+
+}
+
 add_action( 'init', 'iamjdcollins_book_reviews_init' );
