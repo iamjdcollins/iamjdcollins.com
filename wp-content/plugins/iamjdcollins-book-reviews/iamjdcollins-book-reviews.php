@@ -14,7 +14,7 @@ Text Domain: iamjdcollins-book-reviews
 function iamjdcollins_book_reviews_init() {
 	$labels = array(
 		'name'               => __( 'Book Reviews' ),
-		'singular_name'      => __( 'Book Review' )
+		'singular_name'      => __( 'Book Review' ),
 		'menu_name'          => __( 'Book Reviews' ),
 		'name_admin_bar'     => __( 'Book Review' ),
 		'add_new'            => __( 'Add New' ),
