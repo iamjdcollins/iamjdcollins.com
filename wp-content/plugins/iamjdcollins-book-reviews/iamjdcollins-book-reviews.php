@@ -17,7 +17,7 @@ function iamjdcollins_book_reviews_init() {
 		'singular_name'      => __( 'Book Review' ),
 		'menu_name'          => __( 'Book Reviews' ),
 		'name_admin_bar'     => __( 'Book Review' ),
-		'add_new'            => __( 'Add New' ),
+		'add_new'            => __( 'Add New Book Review' ),
 		'add_new_item'       => __( 'Add New Book Review' ),
 		'new_item'           => __( 'New Book Review' ),
 		'edit_item'          => __( 'Edit Book Review' ),
