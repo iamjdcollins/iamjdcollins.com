@@ -77,3 +77,4 @@ function iamjdcollins_book_review_save_author_metabox($post_id) {
 
 add_action( 'init', 'iamjdcollins_book_reviews_init' );
 add_action( 'add_meta_boxes', 'iamjdcollins_book_review_add_author_metabox' );
+add_action( 'save_post', 'iamjdcollins_book_review_save_author_metabox' );
