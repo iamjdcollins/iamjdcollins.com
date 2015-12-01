@@ -65,9 +65,10 @@ function iamjdcollins_book_review_add_author_metabox() {
 
 /* Adds information to the metabox */
 function iamjdcollins_book_review_metabox() {
-/*	global $post;*/
+	global $post;
 
 	wp_nonce_field( 'iamjdcollins_book_review_save_author_metabox', 'iamjdcollins_book_review_nonce' );
+	
 	echo '<label for="iamjdcollins_book_review_author">Author</label>';
 	echo '<input class="book-author" type="text" id="iamjdcollins_book_review_author" name="iamjdcollins_book_review_author" value="' . get_post_meta( $post->ID, 'iamjdcollins_book_review_author', true ) . '" />';
 
