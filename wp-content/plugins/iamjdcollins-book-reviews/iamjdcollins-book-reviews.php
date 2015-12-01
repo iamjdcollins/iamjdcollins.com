@@ -11,8 +11,10 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: iamjdcollins-book-reviews
 */
 
+/*Hook to run when plugin is activated*/
 register_activation_hook(__FILE__, 'iamjdcollins_book_reviews_rewrite_rules');
 
+/*Defines the content type*/
 function iamjdcollins_book_reviews_init() {
 	$labels = array(
 		'name'               => __( 'Book Reviews' ),
@@ -51,30 +53,48 @@ function iamjdcollins_book_reviews_init() {
 	register_post_type( 'book-reviews', $args );
 }
 
+/* Flush the rewrite rules to allow permalinks to work on the new content type */
 function iamjdcollins_book_reviews_rewrite_rules() {
 	iamjdcollins_book_reviews_init();
 	flush_rewrite_rules( false );
 }
-
+/* Creates a metabox */
 function iamjdcollins_book_review_add_author_metabox() {
-	add_meta_box( 'book_review_author', 'Book Author', 'iamjdcollins_book_review_author_metabox', 'book-reviews', 'normal', 'default' );
+	add_meta_box( 'iamjdcollins_book_review', 'Book Review Details', 'iamjdcollins_book_review_metabox', 'book-reviews', 'normal', 'default' );
 }
 
-function iamjdcollins_book_review_author_metabox() {
-	global $post;
+/* Adds information to the metabox */
+function iamjdcollins_book_review_metabox() {
+/*	global $post;*/
 
-	wp_nonce_field( 'iamjdcollins_book_review_save_author_metabox', 'book_review_nonce' );
-	echo '<input class="book-author" type="text" name="book_author" value="' . get_post_meta( $post->ID, 'book_review_author', true ) . '" />';
+	wp_nonce_field( 'iamjdcollins_book_review_save_author_metabox', 'iamjdcollins_book_review_nonce' );
+	echo '<label for="iamjdcollins_book_review_author">Author</label>';
+	echo '<input class="book-author" type="text" id="iamjdcollins_book_review_author" name="iamjdcollins_book_review_author" value="' . get_post_meta( $post->ID, 'iamjdcollins_book_review_author', true ) . '" />';
+
+	echo '<label for="iamjdcollins_book_review_isbn">ISBN</label>';
+	echo '<input class="book-isbn" type="text" name="iamjdcollins_book_review_isbn" value="' . get_post_meta( $post->ID, 'iamjdcollins_book_review_isbn', true ) . '" />';
+	
+	echo '<label for="iamjdcollins_book_review_rating">Rating</label>';
+	echo '<input class="book-rating" type="text" name="iamjdcollins_book_review_rating" value="' . get_post_meta( $post->ID, 'iamjdcollins_book_review_rating', true ) . '" />';
 
 	
 
 }
 
+/* Function to run when saving a post */
 function iamjdcollins_book_review_save_author_metabox($post_id) {
-	$value = $_POST['book_author'];
-	update_post_meta($post_id, 'book_review_author', $value );
+	$author = $_POST['iamjdcollins_book_review_author'];
+	$isbn = $_POST['iamjdcollins_book_review_isbn'];
+	$rating = $_POST['iamjdcollins_book_review_isbn'];
+
+	update_post_meta($post_id, 'iamjdcollins_book_review_author', $author );
+	update_post_meta($post_id, 'iamjdcollins_book_review_isbn', $isbn );
+	update_post_meta($post_id, 'iamjdcollins_book_review_rating', $rating );
 }
 
+/* Adds to content type during init */
 add_action( 'init', 'iamjdcollins_book_reviews_init' );
+/* Triggers the addition of the custom metabox */
 add_action( 'add_meta_boxes', 'iamjdcollins_book_review_add_author_metabox' );
+/* Triggers the save function when a post is saved. */
 add_action( 'save_post', 'iamjdcollins_book_review_save_author_metabox' );
