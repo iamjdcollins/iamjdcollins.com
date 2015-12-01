@@ -68,7 +68,7 @@ function iamjdcollins_book_review_metabox() {
 	global $post;
 
 	wp_nonce_field( 'iamjdcollins_book_review_save_author_metabox', 'iamjdcollins_book_review_nonce' );
-	
+
 	echo '<label for="iamjdcollins_book_review_author">Author</label>';
 	echo '<input class="book-author" type="text" id="iamjdcollins_book_review_author" name="iamjdcollins_book_review_author" value="' . get_post_meta( $post->ID, 'iamjdcollins_book_review_author', true ) . '" />';
 
@@ -86,7 +86,7 @@ function iamjdcollins_book_review_metabox() {
 function iamjdcollins_book_review_save_author_metabox($post_id) {
 	$author = $_POST['iamjdcollins_book_review_author'];
 	$isbn = $_POST['iamjdcollins_book_review_isbn'];
-	$rating = $_POST['iamjdcollins_book_review_isbn'];
+	$rating = $_POST['iamjdcollins_book_review_rating'];
 
 	update_post_meta($post_id, 'iamjdcollins_book_review_author', $author );
 	update_post_meta($post_id, 'iamjdcollins_book_review_isbn', $isbn );
