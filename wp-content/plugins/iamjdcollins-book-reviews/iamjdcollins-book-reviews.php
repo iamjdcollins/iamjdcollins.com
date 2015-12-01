@@ -72,10 +72,10 @@ function iamjdcollins_book_review_metabox() {
 	echo '<input class="book-author" type="text" id="iamjdcollins_book_review_author" name="iamjdcollins_book_review_author" value="' . get_post_meta( $post->ID, 'iamjdcollins_book_review_author', true ) . '" />';
 
 	echo '<label for="iamjdcollins_book_review_isbn">ISBN</label>';
-	echo '<input class="book-isbn" type="text" name="iamjdcollins_book_review_isbn" value="' . get_post_meta( $post->ID, 'iamjdcollins_book_review_isbn', true ) . '" />';
+	echo '<input class="book-isbn" type="text" id="iamjdcollins_book_review_isbn" name="iamjdcollins_book_review_isbn" value="' . get_post_meta( $post->ID, 'iamjdcollins_book_review_isbn', true ) . '" />';
 	
 	echo '<label for="iamjdcollins_book_review_rating">Rating</label>';
-	echo '<input class="book-rating" type="text" name="iamjdcollins_book_review_rating" value="' . get_post_meta( $post->ID, 'iamjdcollins_book_review_rating', true ) . '" />';
+	echo '<input class="book-rating" type="text" id="iamjdcollins_book_review_rating" name="iamjdcollins_book_review_rating" value="' . get_post_meta( $post->ID, 'iamjdcollins_book_review_rating', true ) . '" />';
 
 	
 
